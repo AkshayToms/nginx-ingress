@@ -19,7 +19,7 @@ metadata:
     app.kubernetes.io/version: 0.41.2
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/component: controller
-  name: ingress-nginx
+  name: ingress-nginx-internal
   namespace: ingress-nginx-internal
 ---
 # Source: ingress-nginx/templates/controller-configmap.yaml
@@ -124,7 +124,7 @@ roleRef:
   name: ingress-nginx
 subjects:
   - kind: ServiceAccount
-    name: ingress-nginx
+    name: ingress-nginx-internal
     namespace: ingress-nginx-internal
 ---
 # Source: ingress-nginx/templates/controller-role.yaml
@@ -241,7 +241,7 @@ roleRef:
   name: ingress-nginx
 subjects:
   - kind: ServiceAccount
-    name: ingress-nginx
+    name: ingress-nginx-internal
     namespace: ingress-nginx-internal
 ---
 # Source: ingress-nginx/templates/controller-service-webhook.yaml
