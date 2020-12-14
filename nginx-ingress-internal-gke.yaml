@@ -406,7 +406,7 @@ spec:
               memory: 90Mi
       nodeSelector:
         kubernetes.io/os: linux
-      serviceAccountName: ingress-nginx
+      serviceAccountName: ingress-nginx-internal
       terminationGracePeriodSeconds: 300
       volumes:
         - name: webhook-cert
