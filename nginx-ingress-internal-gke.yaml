@@ -124,7 +124,7 @@ roleRef:
   name: ingress-nginx
 subjects:
   - kind: ServiceAccount
-    name: ingress-nginx
+    name: ingress-nginx-internal
     namespace: ingress-nginx-internal
 ---
 # Source: ingress-nginx/templates/controller-role.yaml
